@@ -11,6 +11,10 @@ module.exports = function (eleventyConfig) {
     }
   })
 
+  eleventyConfig.addWatchTarget("./app/_stylesheets/");
+  eleventyConfig.addWatchTarget("./app/images/");
+  eleventyConfig.addWatchTarget("./app/_javascripts/");
+
   // Template libraries
   eleventyConfig.setLibrary('njk', require('./lib/libraries/nunjucks'))
   eleventyConfig.setLibrary('md', require('./lib/libraries/markdown'))
