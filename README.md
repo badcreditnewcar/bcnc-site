@@ -2,5 +2,16 @@
 
 ## To-do
 
-- [_] something
-- [_] something else
+- [x] Set-up basic 11ty and JAMStack site
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
