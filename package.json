@@ -1,20 +1,20 @@
 {
-  "name": "paulmsmith-static-site-template",
+  "name": "bcnc-static-site",
   "version": "1.0.0",
   "private": true,
   "engines": {
     "node": "^14.0.0"
   },
-  "description": "The static site generator template repo",
+  "description": "JAMStack site for BadCreditNewCar",
   "keywords": [
     "paulmsmith",
     "11ty"
   ],
   "author": "Paul Michael Smith",
   "license": "MIT",
-  "homepage": "https://paulsmith.site",
-  "repository": "github:paulmsmith/static-site",
-  "bugs": "https://github.com/paulmsmith/static-site/issues",
+  "homepage": "https://badcreditnewcar.co.uk",
+  "repository": "github:paulmsmith/bcnc-static",
+  "bugs": "https://github.com/paulmsmith/bcnc-static/issues",
   "scripts": {
     "prebuild": "rm -rf public",
     "build:files": "eleventy",

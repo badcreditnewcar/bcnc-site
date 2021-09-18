@@ -1,1 +1,1 @@
-# Static Site template
+# BadCreditNewCar JAMStack site

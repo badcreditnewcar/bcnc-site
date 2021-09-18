@@ -10,13 +10,12 @@ body {
 }
 
 .frame-content:before {
-  content: 'Digital Land';
+  content: 'Site';
   display: block;
   background: #000;
   padding: 15px;
   color: #fff;
   font-weight: bold;
-  border-bottom: 7px solid #1f70b8;
   font-size: 1.5rem;
 }
 
