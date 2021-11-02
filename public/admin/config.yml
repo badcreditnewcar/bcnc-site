@@ -2,8 +2,8 @@
 backend:
   name: github
   branch: main
-  repo: digital-land/content-site # cms repo
-  base_url: https://dl-cms-oauth-service.herokuapp.com # OAuth server
+  repo: badcreditnewcar/badcreditnewcar.co.uk # cms repo
+  base_url: https://bcnc-cms-oauth-service.herokuapp.com/ # OAuth server
 # when true will assume needs netlify-cms-proxy-server running: npx netlify-cms-proxy-server
 local_backend: true
 logo_url: /assets/images/dl-logo.svg

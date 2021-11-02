@@ -13,8 +13,8 @@
   "author": "Paul Michael Smith",
   "license": "MIT",
   "homepage": "https://badcreditnewcar.co.uk",
-  "repository": "github:paulmsmith/bcnc-static",
-  "bugs": "https://github.com/paulmsmith/bcnc-static/issues",
+  "repository": "github:badcreditnewcar/badcreditnewcar.co.uk",
+  "bugs": "https://github.com/paulmsmith/badcreditnewcar.co.uk/issues",
   "scripts": {
     "prebuild": "rm -rf public",
     "build:files": "eleventy",
