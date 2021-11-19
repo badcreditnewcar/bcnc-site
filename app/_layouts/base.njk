@@ -7,13 +7,84 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title }}</title>
   {% block head %}
-    <link href="/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="/assets/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" />
     <meta property="og:title" content="{{ title }}">
     {% if description %}<meta property="og:description" name="description" content="{{ description | markdown("inline") | striptags(true) }}">{% endif %}
     <meta property="og:image" content="/images/opengraph-image.png">
   {% endblock %}
 </head>
 <body>
- {% block main %}{% endblock %}
+<header class="header-global">
+	<div class="constraint">
+		<div class="grid grid--middle">
+			<div class="header-global__brand">
+				<h1 class="header-global__title">
+					<a href="/"><img src="/assets/images/logo.png" alt="" class="header-global__logo" /></a>
+				</h1>
+			</div>
+			<!-- /.grid__item tablet--one-half -->
+			<div class="header-global__navigation">
+        <div class="header-global__navigation__toggler">
+					<button class="header-global__navigation__toggler__button js-menu-toggler" role="button"><span class="header-global__navigation__toggler__button__label">MENU</span><span class="header-global__navigation__toggler__button__icon"></span></button>
+				</div>
+				<div class="header-global__navigation__menu js-menu-object">
+					<nav class="navigation-global" role="navigation">
+						<ul>
+              <li><a href="/" data-scroll-to="#welcome">Home</a></li>
+							<li><a href="/about/" title="About us">About</a></li>
+							<li><a href="/apply/" title="Apply for help and services in getting you a newer, better car">Apply</a></li>
+							<li><a href="/showroom/" title="View our online showroom of all types of cars">Showroom</a></li>
+							<li><a href="/contact/" title="Get in touch and view our contact details">Contact</a></li>
+						</ul>
+					</nav>
+					<!-- /.global-navigation -->
+				</div>
+        <!-- /.header-global__navigation__menu -->
+			</div>
+			<!-- /.grid__item tablet--one-half -->
+		</div>
+		<!-- /.grid -->
+	</div>
+	<!-- /.constraint--desktop -->
+</header>
+<!-- /.header-global -->
+
+{% block main %}{% endblock %}
+
+<div class="sub-header-global">
+	<div class="constraint">
+		<div class="grid">
+			<div class="grid__item lte-mobile--one-whole one-half sub-header-global__left">
+				<p>The cost of credit overall may be higher for this type of facility. We are a credit broker not a lender.</p>
+			</div>
+			<div class="grid__item lte-mobile--one-whole one-half sub-header-global__right">
+			<p style="line-height: 1;"><strong>29.8% APR Represenative</strong><span style="display:block; line-height: 0.5;"><a href="/apply/finance-example/" style="font-size: 12px; color: #000; opacity: 0.5; margin: 0; padding: 0; display: inline;">Click here for an example</a></span></p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer class="footer-global">
+	<div class="constraint group">
+		<div class="grid">
+			<div class="grid__item one-whole gt-tablet-small--two-thirds footer-global__disclaimer">
+				<p>&copy; 2021 - Bad Credit, New Car.</p>
+				<p class="sml">
+					"Bad Credit New Car" is a trading name of Carladies Limited. It is registered in England and Wales. Registered address: Unit 2C Cowm Top Business Park Cowm Top Lane, Rochdale, OL11 2QA. Company number 11781055				</p>
+				<p class="sml-x">
+					Bad Credit New Car! is the trading name of Carladies Ltd who are authorised and regulated by the Financial Conduct Authority under license number 931444 .  Commission may be received for brokering services provided.				</p>
+			</div>
+			<div class="grid__item one-whole gt-tablet-small--one-third footer-global__terms">
+				<p class="sml"><a href="/docs/terms-conditions">Terms &amp; Privacy Policy</a></p>
+				<p class="sml"><a href="/docs/complaints">Complaints Procedure</a></p>
+			</div>
+		</div>
+	</div>
+	<!-- /.constraint -->
+</footer>
+<!-- /.footer-global -->
+
+<script src="/assets/javascripts/site.min.js"></script>
+
 </body>
 </html>

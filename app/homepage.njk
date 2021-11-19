@@ -8,6 +8,62 @@ eleventyComputed:
     title: "{{ title }}"
 ---
 {% extends "base.njk" %}
+
 {% block main %}
-  <h1>Test</h1>
+<div class="content-section content-section--welcome" id="welcome">
+    <div class="constraint">
+      <h2 class="content-section__title">Welcome</h2>
+      <p>At Bad Credit, New Car! we understand that a lot of people over the years have had ups and downs with their finances and at times found it hard to keep up to date with commitments.</p>
+      <div class="grid welcome-block">
+        <div class="grid__item one-whole gt-tablet--one-third welcome-block__text">
+          <p>We specialise at <strong>getting you the car you want even with a bad credit score</strong></p>
+          <p>Read more <a href="/about/" title="About BadCreditNewCar">about us and reviews</a>.</p>					</div>
+          <div class="grid__item one-whole gt-tablet--two-thirds welcome-block__image">
+            <p><img src="/assets/images/creditscore_promo.jpg" alt="" class="mw--100"></p>
+          </div>
+          <!-- /.welcome-block__text -->
+      </div>
+      <!-- /.welcome-block -->
+    </div>
+    <!-- /.constraint -->
+</div>
+<!-- /.content-section content-section--welcome -->
+<div class="content-section content-section--whatyouget content-section--alt2" id="whatyouget">
+    <div class="constraint">
+        <h2 class="content-section__title">What you get</h2>
+        <p>Not only do we look after you, we look after your new car as well. From day one you’ll receive:</p>
+        <div class="content-section__body">
+          <div class="grid grid--middle">
+            <div class="grid__item one-half lte-mobile--one-whole">
+              <ul class="receive-list">
+                <li>12 months MOT</li>
+                <li> 12 months Warranty</li>
+                <li>6 months Road Tax</li>
+                <li>Fully prepared &amp; serviced</li>
+                <li>A Customer Satisfaction Guarantee</li>
+              </ul>
+            </div>
+            <!-- /.grid__item one-half lte-mobile--one-half -->
+            <div class="grid__item one-half lte-mobile--one-whole">
+              <img src="/assets/images/perkslogo.jpg" alt="">
+            </div>
+            <!-- /.grid__item one-half lte-mobile--one-half -->
+          </div>
+          <!-- /.grid -->
+        </div>
+        <!-- /.content-section__body -->
+        <div class="content-section__footer">
+            <div class="cta-block">
+                <a href="/apply/" class="cta-button cta-button--alt2">
+                    <span class="cta-button__text">Apply now!</span>
+                </a>
+            </div>
+            <!-- /.cta-block -->
+        </div>
+        <!-- /.content-section__footer -->
+    </div>
+    <!-- /.constraint -->
+</div>
+<!-- /#whatyouget.content-section content-section--whatyouget -->
+
 {% endblock %}
