@@ -11,6 +11,7 @@ module.exports = [
     },
     plugins: [nodeResolve(), commonjs()],
   },
+  // site js file (to be replaced)
   {
     input: "app/_assets/javascripts/site.js",
     output: {
