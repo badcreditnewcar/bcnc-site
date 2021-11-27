@@ -1,10 +1,10 @@
 {
   "layout": "base",
-  "permalink": "{{ page.filePathStem | replace('content/', '') }}/",
-  "tags": ["guidance", "page"],
+  "permalink": "{{ page.filePathStem | replace('content/', '') | replace('-', '/') }}/",
+  "tags": ["project", "page"],
   "eleventyNavigation": {
-    "key": "page",
-    "parent": "home"
+    "key": "car-page",
+    "parent": "showroom"
   },
   "eleventyComputed": {
     "eleventyNavigation": {
