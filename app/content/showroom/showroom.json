@@ -1,7 +1,7 @@
 {
-  "layout": "base",
+  "layout": "car.njk",
   "permalink": "{{ page.filePathStem | replace('content/', '') | replace('-', '/') }}/",
-  "tags": ["project", "page"],
+  "tags": ["car", "page"],
   "eleventyNavigation": {
     "key": "car-page",
     "parent": "showroom"

@@ -38,13 +38,17 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("console", require("./lib/filters/console"));
   eleventyConfig.addFilter("find", require("./lib/filters/find"));
 
-  // // Creates a 'collection' of guidance content but only those that are not set to be hidden
-  //  eleventyConfig.addCollection('guidance', collection => {
-  //   return [...collection.getFilteredByGlob('./app/content/guidance/*.md').filter(function(item) {
-  //     // will only return items that are not specifically hidden
-  //     return item.data.hidden === false
-  //   })].reverse();
-  // });
+  // Creates a 'collection' of car content but only those that are not set to be hidden
+  eleventyConfig.addCollection("cars", (collection) => {
+    return [
+      ...collection
+        .getFilteredByGlob("./app/content/showroom/*.md")
+        .filter(function (item) {
+          // will only return items that are not specifically hidden
+          return item.data.hidden === false;
+        }),
+    ].reverse();
+  });
 
   // Passthrough
   eleventyConfig.addPassthroughCopy("./app/admin/**/*.!(njk)"); // exclude nunjucks templates

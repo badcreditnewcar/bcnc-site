@@ -1,6 +1,9 @@
 ---
 title: "Home"
-permalink: /showrooom/index.html
+pagination:
+  data: collections.cars
+  size: 3
+  alias: room
 description: ""
 eleventyComputed:
   eleventyNavigation:
@@ -11,68 +14,120 @@ eleventyComputed:
 
 {% block main %}
 
-<div class="content-section content-section--welcome" id="welcome">
-  <div class="constraint">
-    <h2 class="content-section__title">Welcome</h2>
-    <p>At Bad Credit, New Car! we understand that a lot of people over the years have had ups and downs with their finances and at times found it hard to keep up to date with commitments.</p>
-    <div class="grid welcome-block">
-      <div class="grid__item one-whole gt-tablet--one-third welcome-block__text">
-        <p>We specialise at <strong>getting you the car you want even with a bad credit score</strong></p>
-        <p>Read more <a href="/about/" title="About BadCreditNewCar">about us and reviews</a>.</p>
-      </div>
-      <div class="grid__item one-whole gt-tablet--two-thirds welcome-block__image">
-        <p><img src="/assets/images/creditscore_promo.jpg" alt="" class="mw--100"></p>
-      </div>
-      <!-- /.welcome-block__text -->
-    </div>
-    <!-- /.welcome-block -->
-    <div class="cta-block">
-      <a href="/showroom" class="cta-button cta-button--showroom">
-          <span class="cta-button__text">Browse our Showroom</span>
-          <span class="icon-car"></span>
-      </a>
-    </div>
-  </div>
-  <!-- /.constraint -->
-</div>
-<!-- /.content-section content-section--welcome -->
+<div class="background-splash background-splash--showroom">
+	<div class="constraint">
+		<section class="showroom">
 
-<div class="content-section content-section--whatyouget content-section--alt2" id="whatyouget">
-    <div class="constraint">
-        <h2 class="content-section__title">What you get</h2>
-        <p>Not only do we look after you, we look after your new car as well. From day one you’ll receive:</p>
-        <div class="content-section__body">
-          <div class="grid grid--middle">
-            <div class="grid__item one-half lte-mobile--one-whole">
-              <ul class="receive-list">
-                <li>12 months MOT</li>
-                <li> 12 months Warranty</li>
-                <li>6 months Road Tax</li>
-                <li>Fully prepared &amp; serviced</li>
-                <li>A Customer Satisfaction Guarantee</li>
-              </ul>
-            </div>
-            <!-- /.grid__item one-half lte-mobile--one-half -->
-            <div class="grid__item one-half lte-mobile--one-whole">
-              <img src="/assets/images/perkslogo.jpg" alt="">
-            </div>
-            <!-- /.grid__item one-half lte-mobile--one-half -->
+			<header class="showroom__header">
+        <div class="grid grid--middle">
+          <div class="grid__item one-whole gt-tablet-small--one-half">
+            <h2 class="showroom__header__title">Showroom</h2>
           </div>
-          <!-- /.grid -->
-        </div>
-        <!-- /.content-section__body -->
-        <div class="content-section__footer">
-            <div class="cta-block">
-                <a href="/apply/" class="cta-button cta-button--alt2">
-                    <span class="cta-button__text">Apply now! <span class="icon-arrow-long-right"></span></span>
-                </a>
+          {# <div class="grid__item one-whole gt-tablet-small--one-half">
+            <div class="showroom__header__sort ta--right--gt-tablet-small">
+              <a href="?sort=low" class="sort-button">Sort price: High to low <span class="sort-button__icon">&#9650;</span></a>
             </div>
-            <!-- /.cta-block -->
+          </div> #}
         </div>
-        <!-- /.content-section__footer -->
-    </div>
-    <!-- /.constraint -->
+			</header>
+
+			<div class="showroom__body">
+				<div class="showroom__body__intro">
+					<p><strong>Welcome to our online showroom. Everything you see here is available for you to drive away today!</strong></p>
+        </div>
+      </div>
+
+      <div class="grid">
+
+        {%- for car in room -%}
+        <div class="grid__item one-whole gt-tablet--one-third">
+
+          <article class="showroom-item">
+
+            <div class="showroom-item__thumb">
+              <a href="{{ car.url }}">
+                  <img src='{{ car.data.main_image }}' class="showroom-item__thumb__img">
+              </a>
+            </div>
+
+            <div class="showroom-item__body">
+
+              <div class="showroom-item__body__header">
+                <h2 class="showroom-item__body__header__title">{{ car.data.make }} &ndash; {{ car.data.model }}</h2>
+              </div>
+
+              <div class="showroom-item__meta group showroom-item__meta--price">
+                <div class="showroom-item__meta__key">Price</div>
+                <div class="showroom-item__meta__value">&pound;{{ car.data.price.amount }} per week</div>
+              </div>
+
+              <div class="showroom-item__meta group showroom-item__meta--milage">
+                <div class="showroom-item__meta__key">Mileage</div>
+                <div class="showroom-item__meta__value">{{ car.data.milage }}</div>
+              </div>
+
+              <div class="showroom-item__meta group showroom-item__meta--fuel">
+                <div class="showroom-item__meta__key">Fuel type</div>
+                <div class="showroom-item__meta__value">{{ car.data.fuel_type }}</div>
+              </div>
+
+              <div class="cta-anchor">
+                <a href="{{ car.url }}" class="cta-anchor__link">View this car</a>
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+        {%- endfor -%}
+
+        <div class="grid__item one-whole">
+          <div class="paging">
+            <div class="grid grid--middle">
+              {# <div class="grid__item one-whole">
+                <div class="cta-carbuying group">
+                  <div class="grid grid--rev">
+                    <div class="grid__item one-quarter gt-tablet-small--one-sixth gt-desktop--one-tenth cta-carbuying__image">
+                      <img src="/assets/images/buying_man.jpg" alt="" />
+                    </div>
+                    <div class="grid__item three-quarters gt-tablet-small--five-sixths gt-desktop--nine-tenths cta-carbuying__content">
+                      <h2 class="cta-carbuying__title">Not found what you're looking for?</h2>
+                      <div class="cta-carbuying__body">
+                        <p>We offer a car buying service. Tell us what you want and we'll do the hard work to make things simple for you.</p>
+                        <p><a href="/car-buying-service" class="cta-button-small">Find out more</a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> #}
+
+              <div class="grid__item one-half gt-tablet--one-third paging__prev">
+              </div>
+
+              <div class="grid__item one-whole gt-tablet--show gt-tablet--one-third paging__pages">
+                <div class="paging__pages__index">
+                  <div class="paging__pages__index__display">
+                  {{ pagination | console | safe }}
+                  {% for pageKey in pagination.pages %}
+                    <a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %} class="{% if page.url == pagination.hrefs[ loop.index0 ] %}{% else %}{% endif %}">{{ loop.index }}</a>
+                  {% endfor %}
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid__item one-half  gt-tablet--one-third paging__next">
+                  <a href="/showroom?page=2" class="paging__next__link"><span class="paging__next__link__text">Next</span> <span class="icon-next"></span></a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
 </div>
-<!-- /#whatyouget.content-section content-section--whatyouget -->
 
 {% endblock %}

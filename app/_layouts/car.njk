@@ -1,0 +1,283 @@
+{% extends "base.njk" %}
+
+{% block main %}
+
+  <div class="cta-call">
+    <p>Questions? Get in touch</p>
+    <p>
+      <a href="tel:01204916044" class="cta-call__link">
+        <span class="cta-call__icon"><img src="/assets/images/call_icon.png" alt=""/></span>
+        <span class="cta-call__label">
+          <span class="webfont-a">CALL US NOW</span>
+          <span class="icon-arrow-long-right"></span></span>
+      </a>
+    </p>
+  </div>
+
+  <div class="background-splash background-splash--showroom">
+
+    <section class="showroom">
+
+      <header class="showroom__header">
+        <div class="showroom__header__back">
+          <a href="/showroom/" class="showroom__header__back__link">
+            <span class="icon-level-up"></span></a>
+        </div>
+        <h2 class="showroom__header__title">Showroom</h2>
+      </header>
+
+      <div class="showroom-car">
+
+        <div class="showroom-car__header">
+          <h2 class="showroom-car__header__title">
+            {{ make }} &ndash; {{ model }}
+          </h2>
+        </div>
+
+        <div class="grid">
+
+          <div class="grid__item one-whole gt-desktop--two-thirds">
+
+            {% if main_image %}
+            <div class="showroom-car__images">
+              <div class="carousel carousel--car-item" data-slick='{"slidesToShow": 1, "slidesToScroll": 1, "dots": true}'>
+
+                <div class="carousel__item">
+                  <div class="carousel__item__thumb">
+                    <img src='{{ main_image }}' alt="">
+                  </div>
+                </div>
+
+                {% if images %}
+                {% for image in images %}
+                  <div class="carousel__item">
+                    <div class="carousel__item__thumb">
+                      <img src='{{ image }}' alt="">
+                    </div>
+                  </div>
+                {% endfor %}
+                {% endif %}
+
+              </div>
+            </div>
+            {% endif %}
+
+            {% if price %}
+            <div class="showroom-car__header">
+              <div class="showroom-car__header__price">
+                <div class="showroom-car__header__price__title">
+						      This car can be yours for just
+					      </div>
+                <span class="showroom-car__header__price__inner">
+                  <span class="showroom-car__header__price__inner__currency">&pound;</span>
+                  <span class="showroom-car__header__price__inner__amount">{{ price.amount | d('99') }} {% if price.interval == "weekly" %}per week {% else %}per month{% endif %}</span>
+                </span>
+              </div>
+            </div>
+            {% endif %}
+
+          </div>
+
+          <div class="grid__item one-whole gt-desktop--one-third">
+
+            <div class="showroom-car__features">
+              <h2 class="showroom-car__subtitle">Key Details</h2>
+              <dl class="features-list features-list--detail group">
+                <dt>Make:</dt>
+                <dd>{{ make }}</dd>
+                <dt>Model:</dt>
+                <dd>{{ model }}</dd>
+                <dt>Submodel:</dt>
+                <dd>{{ submodel }}</dd>
+                <dt>Mileage:</dt>
+                <dd>{{ milage }}</dd>
+                <dt>Fuel type:</dt>
+                <dd>{{ fuel_type }}</dd>
+                <dt>Transmission:</dt>
+                <dd>{{ transmission }}</dd>
+                <dt>Registration:</dt>
+                <dd>{{ title }}</dd>
+              </dl>
+            </div>
+
+            <div class="showroom-car__features">
+              <h2 class="showroom-car__subtitle">Features</h2>
+              <ul class="car-features">
+                {% for item in features %}
+                  <li>{{ item.feature }}{% if not loop.last %}, {% endif %}</li>
+                {% endfor %}
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <div class="car-apply-cta-panel">
+
+      <div class="cta-block">
+        <a href="/apply/" class="cta-button cta-button--alt2">
+          <span class="cta-button__text">Apply for this Car</span>
+          <span class="icon-arrow-long-right"></span>
+        </a>
+      </div>
+
+    </div>
+
+    {# <div id="enqForm">
+      <div class="form form--car-enquiry">
+
+        <h2 class="form__title">Need more info about this car?</h2>
+
+        <p>Fill in this form and we will be happy to answer all your questions</p>
+
+        <form id="form1_car_detail" class="contact-form contact-form--car" action="/showroom/lexus/nx300h/yl17ylc" method="post">
+
+          <input id="form1_car_make" name="car_make" value="Lexus" type="hidden"/>
+          <input id="form1_car_model" name="car_model" value="NX300h" type="hidden"/>
+          <input id="form1_car_reg" name="car_reg" value="YL17YLC" type="hidden"/>
+
+          <div class="frow frow--select frow--inline is--required">
+            <label class="frow__label" for="form1_title">Title</label>
+            <div class="frow__capture">
+              <select id="form1_title" name="title" class="frow__field" required="required">
+                <option value="Mr">Mr</option>
+                <option value="Mrs">Mrs</option>
+                <option value="Miss">Miss</option>
+                <option value="Ms">Ms</option>
+              </select>
+            </div>
+            <!-- /.frow__capture -->
+          </div>
+          <!-- /.frow frow--select -->
+
+          <div class="grid">
+
+            <div class="grid__item one-half lte-mobile--one-whole">
+
+              <div class="frow frow--text is--required">
+                <label class="frow__label" for="form1_first_name">First name</label>
+                <div class="frow__capture">
+                  <input id="form1_first_name" name="first_name" class="frow__field" type="text" required="required"/>
+                </div>
+                <!-- /.frow__capture -->
+              </div>
+              <!-- /.frow frow--text -->
+
+            </div>
+            <!-- /.grid__item one-half lte-mobile--one-whole -->
+
+            <div class="grid__item one-half lte-mobile--one-whole">
+
+              <div class="frow frow--text is--required">
+                <label class="frow__label" for="form1_surname">Surname</label>
+                <div class="frow__capture">
+                  <input id="form1_surname" name="surname" class="frow__field" type="text" required="required"/>
+                </div>
+                <!-- /.frow__capture -->
+              </div>
+              <!-- /.frow frow--text -->
+
+            </div>
+            <!-- /.grid__item one-half lte-mobile--one-whole -->
+
+            <div class="grid__item one-half lte-mobile--one-whole">
+
+              <div class="frow frow--text is--required">
+                <label class="frow__label" for="form1_email">Email</label>
+                <div class="frow__capture">
+                  <input id="form1_email" name="email" class="frow__field" type="email" required="required"/>
+                </div>
+                <!-- /.frow__capture -->
+              </div>
+              <!-- /.frow frow--text -->
+
+            </div>
+            <!-- /.grid__item one-half lte-mobile--one-whole -->
+
+            <div class="grid__item one-half lte-mobile--one-whole">
+
+              <div class="frow frow--text is--required">
+                <label class="frow__label" for="form1_telephone">Phone</label>
+                <div class="frow__capture">
+                  <input id="form1_telephone" name="telephone" class="frow__field" type="text" required="required"/>
+                </div>
+                <!-- /.frow__capture -->
+              </div>
+              <!-- /.frow frow--text -->
+
+            </div>
+            <!-- /.grid__item one-half lte-mobile--one-whole -->
+
+            <div class="grid__item one-whole">
+
+              <p>
+                <strong>Choose a date &amp; time for us to call you</strong>
+              </p>
+
+            </div>
+            <!-- /.grid__item one-whole -->
+
+            <div class="grid__item one-half lte-mobile--one-whole">
+
+              <div class="frow frow--text frow--dt-picker is--required">
+                <label class="frow__label" for="form1_calldate">Date</label>
+                <div class="frow__capture">
+                  <input id="form1_calldate" name="calldate" class="frow__field is--datepicker" placeholder="e.g: 01 Aug, 2015" type="text" required="required"/>
+                </div>
+                <!-- /.frow__capture -->
+              </div>
+              <!-- /.frow frow--text -->
+
+            </div>
+            <!-- /.grid__item one-half lte-mobile--one-whole -->
+
+            <div class="grid__item one-half lte-mobile--one-whole">
+
+              <div class="frow frow--text frow--dt-picker is--required">
+                <label class="frow__label" for="form1_calltime">Time</label>
+                <div class="frow__capture">
+                  <input id="form1_calltime" name="calltime" class="frow__field is--timepicker" placeholder="e.g: 3:00PM" type="text"/>
+                </div>
+                <!-- /.frow__capture -->
+              </div>
+              <!-- /.frow frow--text -->
+
+            </div>
+            <!-- /.grid__item one-half lte-mobile--one-whole -->
+
+            <div class="grid__item one-whole">
+
+              <div class="frow frow--textarea is--required">
+                <label class="frow__label" for="form1_message">A message to us</label>
+                <div class="frow__capture">
+                  <textarea id="form1_message" name="message" class="frow__field" cols="30" rows="4" required="required"></textarea>
+                </div>
+                <!-- /.frow__capture -->
+              </div>
+              <!-- /.frow frow--textarea -->
+
+            </div>
+            <!-- /.grid__item one-whole -->
+
+            <div class="grid__item one-whole">
+
+              <input id="form1_submit" name="submit" class="btn btn--full contact-form__submit form__submit" value="Send message" type="submit"/><input type="hidden" name="cms-form" value="Y2FyX2RldGFpbDpwZXJjaF9mb3JtczovdGVtcGxhdGVzL2NvbnRlbnQvY2Fycy9zaG93cm9vbV9pdGVtX2RldGFpbF9mb3JtLmh0bWw6MTYzODAyNDc2MA=="/>
+
+            </div>
+            <!-- /.grid__item one-whole -->
+
+          </div>
+          <!-- /.grid -->
+
+        </form>
+
+      </div> #}
+
+
+    </div>
+
+  {% endblock %}

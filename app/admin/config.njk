@@ -12,8 +12,12 @@ local_backend: {{ "true" if env == "local" else "false" }}
 logo_url: /assets/images/dl-logo.svg
 publish_mode: editorial_workflow
 public_folder: /assets/images/uploads
-media_folder: app/images/uploads
+media_folder: app/_assets/images/uploads
 display_url: https://badcreditnewcar.co.uk
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "_"
 site_url: {{ "http://localhost:8080" if env == "local" else "https://badcreditnewcar.co.uk" }}
 collections:
   - name: "cars"
@@ -81,7 +85,7 @@ collections:
           - { label: "Porsche", value: "Porsche" }
           - { label: "Renault", value: "Renault" }
           - { label: "Rolls-Royce", value: "Rolls-Royce" }
-          - { label: "Rover", value: "Rover" }
+          - { label: "Range Rover", value: "Range Rover" }
           - { label: "Saab", value: "Saab" }
           - { label: "Seat", value: "Seat" }
           - { label: "Skoda", value: "Skoda" }
@@ -99,15 +103,82 @@ collections:
         name: "transmission"
         widget: "select"
         options:
-          - { label: "Automatic", value: "automatic" }
-          - { label: "Manual", value: "manual" }
-      - label: "Year"
-        name: "year"
-        widget: "datetime"
-        default: ""
-        date_format: "YYYY"
-        time_format: false # e.g. 21:07
-        format: "gggg"
-        picker_utc: false
+          - { label: "Automatic", value: "Automatic" }
+          - { label: "Manual", value: "Manual" }
+      - label: "Milage"
+        name: "milage"
+        widget: "number"
+        default: 0
+        value_type: "int"
+        min: 1
+        step: 10
+      - label: "Fuel type"
+        name: "fuel_type"
+        widget: "select"
+        options:
+          - { label: "Petrol", value: "Petrol" }
+          - { label: "Diesel", value: "Diesel" }
+          - { label: "Hybrid", value: "Hybrid" }
+          - { label: "Electric", value: "Electric" }
+      - label: "Featured Image"
+        name: "main_image"
+        widget: "image"
+        choose_url: false
+      - label: "Images"
+        name: "images"
+        widget: "list"
+        minimize_collapsed: true
+        collapsed: false
+        summary: '{{fields.image}}'
+        field: { label: Image, name: image, widget: image, choose_url: false }
+      - label: "Features"
+        name: "features"
+        widget: "list"
+        summary: 'Feature'
+        minimize_collapsed: true
+        add_to_top: true
+        collapsed: false
+        fields:
+          - label: "Feature"
+            name: "feature"
+            widget: "select"
+            options:
+              - { label: "12 Months Warrenty", value: "12 Months Warrenty" }
+              - { label: "12 Months MOT", value: "12 Months MOT" }
+              - { label: "Metallic Paint", value: "Metallic Paint" }
+              - { label: "Alloy Wheels", value: "Alloy Wheels" }
+              - { label: "Bi - Xenon Lights", value: "Bi - Xenon Lights" }
+              - { label: "Parking Sensors", value: "Parking Sensors" }
+              - { label: "Leather Seats", value: "Leather Seats" }
+              - { label: "Half Leather Seats", value: "Half Leather Seats" }
+              - { label: "Electric Seats", value: "Electric Seats" }
+              - { label: "Electric Windows", value: "Electric Windows" }
+              - { label: "Electric Mirrors", value: "Electric Mirrors" }
+              - { label: "Folding Mirrors", value: "Folding Mirrors" }
+              - { label: "Sun Roof", value: "Sun Roof" }
+              - { label: "CD Player", value: "CD Player" }
+              - { label: "CD changer", value: "CD changer" }
+              - { label: "SAT Nav", value: "SAT Nav" }
+              - { label: "Multi Media", value: "Multi Media" }
+              - { label: "USB", value: "USB" }
+              - { label: "AUX", value: "AUX" }
+              - { label: "Bluetooth", value: "Bluetooth" }
+              - { label: "Hands Free", value: "Hands Free" }
+              - { label: "Multi Function", value: "Multi Function" }
+              - { label: "Reverse Camera", value: "Reverse Camera" }
+              - { label: "Cruise Control", value: "Cruise Control" }
+              - { label: "Climate Control", value: "Climate Control" }
+              - { label: "Air Conditioning", value: "Air Conditioning" }
+              - { label: "Keyless GO", value: "Keyless GO" }
+              - { label: "Keyless Start", value: "Keyless Start" }
+              - { label: "ABS", value: "ABS" }
+              - { label: "EPS", value: "EPS" }
+              - { label: "Panoramic Roof", value: "Panoramic Roof" }
+      - label: "Price"
+        name: "price"
+        widget: "object"
+        fields:
+          - { label: "Amount", name: "amount", widget: "number" }
+          - { label: "Interval", name: "interval", widget: "select", options: ["weekly", "monthly"], default: "weekly" }
+
       - { label: "Hidden", name: "hidden", widget: "boolean", default: false, hint: "Hides this content from the site. Defaults to false." }
-      - { label: "Description", name: "description", widget: "text", hint: "A summary of this guidance" }
