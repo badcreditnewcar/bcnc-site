@@ -12,6 +12,7 @@ images:
   - /assets/images/uploads/dsc01860-w900h675.jpg
   - /assets/images/uploads/dsc01861-w900h675.jpg
 features:
+  - feature: AUX
   - feature: Parking Sensors
   - feature: Bi - Xenon Lights
   - feature: 12 Months MOT
