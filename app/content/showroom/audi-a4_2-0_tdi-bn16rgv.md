@@ -4,7 +4,7 @@ make: Audi
 model: A4 2.0 TDI
 submodel: Ultra
 transmission: Manual
-milage: 86447
+milage: 90000
 fuel_type: Diesel
 main_image: /assets/images/uploads/dsc01856-w900h675.jpg
 images:

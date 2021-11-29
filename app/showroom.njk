@@ -85,6 +85,7 @@ eleventyComputed:
         <div class="grid__item one-whole">
           <div class="paging">
             <div class="grid grid--middle">
+
               {# <div class="grid__item one-whole">
                 <div class="cta-carbuying group">
                   <div class="grid grid--rev">
@@ -102,13 +103,15 @@ eleventyComputed:
                 </div>
               </div> #}
 
-              <div class="grid__item one-half gt-tablet--one-third paging__prev">
+              <div class="grid__item one-half  gt-tablet--one-third paging__prev">
+                  {% if pagination.href.previous%}
+                  <a href="{{ pagination.href.previous }}" class="paging__prev__link"><span class="icon-prev"></span> <span class="paging__prev__link__text">Back</span></a>
+                  {% endif %}
               </div>
 
               <div class="grid__item one-whole gt-tablet--show gt-tablet--one-third paging__pages">
                 <div class="paging__pages__index">
                   <div class="paging__pages__index__display">
-                  {{ pagination | console | safe }}
                   {% for pageKey in pagination.pages %}
                     <a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %} class="{% if page.url == pagination.hrefs[ loop.index0 ] %}{% else %}{% endif %}">{{ loop.index }}</a>
                   {% endfor %}
@@ -117,7 +120,9 @@ eleventyComputed:
               </div>
 
               <div class="grid__item one-half  gt-tablet--one-third paging__next">
-                  <a href="/showroom?page=2" class="paging__next__link"><span class="paging__next__link__text">Next</span> <span class="icon-next"></span></a>
+                {% if pagination.href.next %}
+                  <a href="{{ pagination.href.next }}" class="paging__next__link"><span class="paging__next__link__text">Next</span> <span class="icon-next"></span></a>
+                {% endif %}
               </div>
 
             </div>

@@ -1,0 +1,40 @@
+---
+title: "Apply"
+permalink: apply/finance-example/index.html
+description: ""
+eleventyComputed:
+  eleventyNavigation:
+    key: finance-example
+    title: "{{ title }}"
+---
+{% extends "base.njk" %}
+
+{% block main %}
+
+{{ app | console | safe }}
+
+<div class="cta-call">
+  <p>Questions? Get in touch</p>
+  <p>
+    <a href="tel:{{ app.contact.phone | replace(' ', '') }}" class="cta-call__link">
+      <span class="cta-call__icon"><img src="/assets/images/call_icon.png" alt="" /></span>
+      <span class="cta-call__label"><span class="webfont-a">CALL US NOW</span> <span class="icon-arrow-long-right"></span></span>
+    </a>
+  </p>
+</div>
+
+<div class='content-section content-section--normal'>
+	<div class="constraint">
+		<h2 class="content-section__title">A finance example</h2>
+		<p>To help you understand how a typical finance agreement will work, see the following example. If you budget weekly or monthly, the following is a clear indicator to help you understand what the finance will cost.</p>
+    <p>You browse our showroom and choose a car that is £54.80 / Week.</p>
+    <p>The cash price of a car you want is £7000 when buying it with Bad Credit New Car, this helps you budget and manage your finances.</p>
+    <p>You pay no deposit (£0)</p>
+    <p>That means your payments would be £237.48 per month over 48 months (4 years)</p>
+    <p>With a 29.8% APR the interest would you pay over the 48 months would be £3,899.04 and the total cost of the car and the finance would have been £11,399.04.</p>
+    <p>With that you also get 12 months MOT, and 12 months Warranty, 6 Months Road Tax and our friendly customer service to help make the process quick and easy.</p>
+	</div>
+	<!-- /.constraint -->
+</div>
+
+{% endblock %}

@@ -1,0 +1,230 @@
+---
+title: "Contact us"
+permalink: contact/index.html
+description: ""
+eleventyComputed:
+  eleventyNavigation:
+    key: contact
+    title: "{{ title }}"
+---
+{% extends "base.njk" %}
+
+{% block main %}
+
+<div class="content-section content-section--contact">
+	<div class="constraint">
+
+    <h2 class="content-section__title">Points of contact</h2>
+
+    <div class="grid">
+
+      <div class="grid__item one-half lte-mobile--one-whole poc-copy">
+
+          <h3 class="poc-copy__title">Sales &amp; General enquiries</h3>
+          <p>Our team of helpful and knowledgable staff will be able to answer any questions you might have for us.</p>
+  	 			<p><strong>Phone:</strong> 01204 916044</p>
+  				<p><strong>Email:</strong> <a href="mailto:sales@badcreditnewcar.co.uk">sales@badcreditnewcar.co.uk</a></p>
+
+        <br>
+
+      </div>
+      <!-- /.grid__item one-half lte-mobile--one-whole -->
+
+      <div class="grid__item one-half lte-mobile--one-whole poc-copy">
+
+          <h3 class="poc-copy__title">Aftersales</h3>
+          <p>We love our existing customers, you are just as important to us as our new customers. We have a dedicated team to help you.</p>          <p><strong>Phone: </strong>01204 916044 - 8am - 8pm</p>
+          <p><strong>Email: </strong><a href="mailto:aftersales@badcreditnewcar.co.uk">aftersales@badcreditnewcar.co.uk</a> - 8am - 8pm</p>
+
+          <br>
+
+      </div>
+      <!-- /.grid__item one-half lte-mobile--one-whole -->
+
+    </div>
+    <!-- /.grid -->
+
+		<h2 class="content-section__title">Contact Head Office</h2>
+
+		<div class="grid">
+
+			<div class="grid__item one-half lte-mobile--one-whole">
+
+				<p class="vcard">
+          <span class="org"><strong>Bad Credit, New Car!</strong></span>
+          <span class="adr">
+            <span class="street-address">
+              Unit 2C
+              <br>Cowm Top Business Park
+              <br>Cowm Top Lane
+            </span>
+            <span class="region">Rochdale</span>
+            <span class="postal-code">OL11 2PU</span>
+            <span class="country-name">United Kingdom</span>
+          </span>
+        </p>
+				<br>
+
+			</div>
+			<!-- /.grid__item one-half lte-mobile--one-whole -->
+
+			<div class="grid__item one-half lte-mobile--one-whole">
+
+	 			<p><strong>Phone:</strong> 01204 916044</p>
+				<p><strong>Fax:</strong> 01204 916044</p>
+				<p><strong>Out of hours:</strong> 01204 916044</p>
+				<p><strong>Email:</strong> <a href="mailto:sales@badcreditnewcar.co.uk">sales@badcreditnewcar.co.uk</a></p>
+
+			</div>
+			<!-- /.grid__item one-half lte-mobile--one-whole -->
+
+		</div>
+		<!-- /.grid -->
+
+	</div>
+	<!-- /.constraint -->
+</div>
+<!-- /.content-section content-section--contact -->
+
+<div class="content-section content-section--map">
+	<div id="map_canvas" class="map-item"></div>
+</div>
+<!-- /.content-section content-section--map -->
+{#
+<div class="content-section content-section--contact-form content-section--alt" id="repair">
+  <div class="constraint">
+
+    <h2 class="content-section__title">Contact Form</h2>
+
+    <form id="form1_contact_form" class="contact-form" action="/contact" method="post">
+
+      <div class="frow frow--select frow--inline is--required">
+        <label class="frow__label" for="form1_title">Title</label>
+        <div class="frow__capture">
+          <select id="form1_title" name="title" class="frow__field" required="required"><option value="Mr">Mr</option><option value="Mrs">Mrs</option><option value="Miss">Miss</option><option value="Ms">Ms</option></select>
+        </div>
+        <!-- /.frow__capture -->
+      </div>
+      <!-- /.frow frow--select -->
+
+      <div class="grid">
+
+        <div class="grid__item one-half lte-mobile--one-whole">
+
+          <div class="frow frow--text is--required">
+            <label class="frow__label" for="form1_first_name">First name</label>
+            <div class="frow__capture">
+              <input id="form1_first_name" name="first_name" class="frow__field" type="text" required="required" />
+            </div>
+            <!-- /.frow__capture -->
+          </div>
+          <!-- /.frow frow--text -->
+
+        </div>
+        <!-- /.grid__item one-half lte-mobile--one-whole -->
+
+        <div class="grid__item one-half lte-mobile--one-whole">
+
+          <div class="frow frow--text is--required">
+            <label class="frow__label" for="form1_surname">Surname</label>
+            <div class="frow__capture">
+              <input id="form1_surname" name="surname" class="frow__field" type="text" required="required" />
+            </div>
+            <!-- /.frow__capture -->
+          </div>
+          <!-- /.frow frow--text -->
+
+        </div>
+        <!-- /.grid__item one-half lte-mobile--one-whole -->
+
+        <div class="grid__item one-half lte-mobile--one-whole">
+
+          <div class="frow frow--text is--required">
+            <label class="frow__label" for="form1_email">Email</label>
+            <div class="frow__capture">
+              <input id="form1_email" name="email" class="frow__field" type="email" required="required" />
+            </div>
+            <!-- /.frow__capture -->
+          </div>
+          <!-- /.frow frow--text -->
+
+        </div>
+        <!-- /.grid__item one-half lte-mobile--one-whole -->
+
+        <div class="grid__item one-half lte-mobile--one-whole">
+
+          <div class="frow frow--text is--required">
+            <label class="frow__label" for="form1_telephone">Phone</label>
+            <div class="frow__capture">
+              <input id="form1_telephone" name="telephone" class="frow__field" type="text" required="required" />
+            </div>
+            <!-- /.frow__capture -->
+          </div>
+          <!-- /.frow frow--text -->
+
+        </div>
+        <!-- /.grid__item one-half lte-mobile--one-whole -->
+
+        <div class="grid__item one-whole">
+
+          <div class="frow frow--textarea is--required">
+            <label class="frow__label" for="form1_message">A message to us</label>
+            <div class="frow__capture">
+              <textarea id="form1_message" name="message" class="frow__field" cols="30" rows="4" required="required"></textarea>
+            </div>
+            <!-- /.frow__capture -->
+          </div>
+          <!-- /.frow frow--textarea -->
+
+        </div>
+        <!-- /.grid__item one-whole -->
+
+        <div class="grid__item one-whole">
+          <input id="form1_forthebees" name="forthebees" class="beetrap" type="text" />
+          <input id="form1_submit" name="submit" class="btn btn--full contact-form__submit form__submit" value="Send message" type="submit" /><input type="hidden" name="cms-form" value="Y29udGFjdF9mb3JtOnBlcmNoX2Zvcm1zOi90ZW1wbGF0ZXMvY29udGVudC9jb250YWN0X2Zvcm0uaHRtbDoxNjM4MTc5NjQ3" />
+        </div>
+        <!-- /.grid__item one-whole -->
+
+      </div>
+      <!-- /.grid -->
+
+    </form>
+
+  </div>
+  <!-- /.constraint -->
+
+</div>
+<!-- /.content-section content-section--repair --> #}
+
+
+<script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLFeM0GV2rPPVSuiR_vLIw9c_rgnCQjB0">
+    </script>
+
+	<script type="text/javascript">
+
+ 	var geocoder;
+    var map;
+
+    function initialize() {
+        geocoder = new google.maps.Geocoder();
+        var latlng = new google.maps.LatLng(53.595389, -2.166892);
+        var mapOptions = {
+            zoom: 16,
+            center: latlng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            scrollwheel: false
+        }
+        map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+
+        var marker = new google.maps.Marker({
+            map: map,
+            position: latlng
+        });
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+	</script>
+
+{% endblock %}
