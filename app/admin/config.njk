@@ -10,7 +10,6 @@ backend:
 # when true will assume needs netlify-cms-proxy-server running: npx netlify-cms-proxy-server
 local_backend: {{ "true" if env == "local" else "false" }}
 logo_url: /assets/images/logo.svg
-publish_mode: editorial_workflow
 public_folder: /assets/images/uploads
 media_folder: app/_assets/images/uploads
 display_url: https://badcreditnewcar.co.uk
@@ -27,6 +26,9 @@ collections:
     create: true
     slug: {% raw %}"{{make}}-{{model}}-{{title}}"{% endraw %}
     preview_path: {% raw %}"showroom/{{make}}/{{model}}/{{title}}/"{% endraw %}
+    summary: {% raw %}"{{make}} {{model}} - {{title}}"{% endraw %}
+    editor:
+      preview: false
     fields:
       - { label: "Registration", name: "title", widget: "string" }
       - label: "Make"
