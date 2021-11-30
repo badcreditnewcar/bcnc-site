@@ -6,11 +6,11 @@ submodel: Ultra
 transmission: Manual
 milage: 90000
 fuel_type: Diesel
-main_image: /assets/images/uploads/dsc01856-w900h675.jpg
+main_image: /assets/images/uploads/cars/dsc01856-w900h675.jpg
 images:
-  - /assets/images/uploads/dsc01859-w900h675.jpg
-  - /assets/images/uploads/dsc01860-w900h675.jpg
-  - /assets/images/uploads/dsc01861-w900h675.jpg
+  - /assets/images/uploads/cars/dsc01859-w900h675.jpg
+  - /assets/images/uploads/cars/dsc01860-w900h675.jpg
+  - /assets/images/uploads/cars/dsc01861-w900h675.jpg
 features:
   - feature: AUX
   - feature: Parking Sensors

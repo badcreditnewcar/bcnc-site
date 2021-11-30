@@ -7,10 +7,10 @@ transmission: Manual
 year: "2019"
 milage: 29557
 fuel_type: Diesel
-main_image: /assets/images/uploads/dsc01839-w900h675.jpg
+main_image: /assets/images/uploads/cars/dsc01839-w900h675.jpg
 images:
-  - /assets/images/uploads/dsc01840-w900h675.jpg
-  - /assets/images/uploads/dsc01842-w900h675.jpg
+  - /assets/images/uploads/cars/dsc01840-w900h675.jpg
+  - /assets/images/uploads/cars/dsc01842-w900h675.jpg
 features:
   - feature: Parking Sensors
   - feature: Bi - Xenon Lights
