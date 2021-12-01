@@ -90,13 +90,13 @@ eleventyComputed:
 	<div id="map_canvas" class="map-item"></div>
 </div>
 <!-- /.content-section content-section--map -->
-{#
+
 <div class="content-section content-section--contact-form content-section--alt" id="repair">
   <div class="constraint">
 
     <h2 class="content-section__title">Contact Form</h2>
 
-    <form id="form1_contact_form" class="contact-form" action="/contact" method="post">
+    <form name="contact" id="form1_contact_form" class="contact-form" action="/contact/thank-you/" method="post" data-netlify="true">
 
       <div class="frow frow--select frow--inline is--required">
         <label class="frow__label" for="form1_title">Title</label>
@@ -194,7 +194,7 @@ eleventyComputed:
   <!-- /.constraint -->
 
 </div>
-<!-- /.content-section content-section--repair --> #}
+<!-- /.content-section content-section--repair -->
 
 
 <script type="text/javascript"
