@@ -2,6 +2,8 @@
 title: "Car buying service"
 permalink: car-buying-service/index.html
 description: ""
+eleventyNavigation:
+  parent: "home"
 eleventyComputed:
   eleventyNavigation:
     key: car-buying-service
@@ -10,6 +12,8 @@ eleventyComputed:
 {% extends "base.njk" %}
 
 {% block main %}
+
+ {% include "callcta.njk" %}
 
   <div class="content-section content-section--contact-form content-section--alt2" id="repair">
 
@@ -35,9 +39,9 @@ eleventyComputed:
       You and your ideal car
     </h2>
 
-    <form id="form1_car_buying" class="contact-form contact-form--car" action="/car-buying-service" method="post">
+    <form id="carbuying" name="car-buying-service" class="contact-form contact-form--car" action="/contact/thank-you/" method="post">
 
-    <input id="form1_forthebees" name="forthebees" class="beetrap" type="text" />
+      <input type="hidden" name="form" value="car-buying-service">
 
       <fieldset class="form-divider form-divider--border-bottom">
       <div class="grid">
@@ -49,25 +53,12 @@ eleventyComputed:
         </div>
         <!-- /.grid__item one-whole -->
 
-        <div class="grid__item one-whole">
-
-          <div class="frow frow--select frow--inline is--required">
-            <label class="frow__label" for="form1_title">Title</label>
-            <div class="frow__capture">
-              <select id="form1_title" name="title" class="frow__field" required="required"><option value="Mr">Mr</option><option value="Mrs">Mrs</option><option value="Miss">Miss</option><option value="Ms">Ms</option></select>
-            </div>
-            <!-- /.frow__capture -->
-          </div>
-          <!-- /.frow frow--select -->
-
-        </div>
-
         <div class="grid__item one-half lte-mobile--one-whole">
 
           <div class="frow frow--text is--required">
-            <label class="frow__label" for="form1_first_name">First name</label>
+            <label class="frow__label" for="carbuying_first_name">First name</label>
             <div class="frow__capture">
-              <input id="form1_first_name" name="first_name" class="frow__field" type="text" required="required" />
+              <input id="carbuying_first_name" name="first_name" class="frow__field" type="text" required="required" />
             </div>
             <!-- /.frow__capture -->
           </div>
@@ -79,9 +70,9 @@ eleventyComputed:
         <div class="grid__item one-half lte-mobile--one-whole">
 
           <div class="frow frow--text is--required">
-            <label class="frow__label" for="form1_surname">Surname</label>
+            <label class="frow__label" for="carbuying_surname">Surname</label>
             <div class="frow__capture">
-              <input id="form1_surname" name="surname" class="frow__field" type="text" required="required" />
+              <input id="carbuying_surname" name="surname" class="frow__field" type="text" required="required" />
             </div>
             <!-- /.frow__capture -->
           </div>
@@ -93,9 +84,9 @@ eleventyComputed:
         <div class="grid__item one-half lte-mobile--one-whole">
 
           <div class="frow frow--text is--required">
-            <label class="frow__label" for="form1_email">Email</label>
+            <label class="frow__label" for="carbuying_email">Email</label>
             <div class="frow__capture">
-              <input id="form1_email" name="email" class="frow__field" type="email" required="required" />
+              <input id="carbuying_email" name="email" class="frow__field" type="email" required="required" />
             </div>
             <!-- /.frow__capture -->
           </div>
@@ -107,9 +98,9 @@ eleventyComputed:
         <div class="grid__item one-half lte-mobile--one-whole">
 
           <div class="frow frow--text is--required">
-            <label class="frow__label" for="form1_telephone">Phone</label>
+            <label class="frow__label" for="carbuying_telephone">Phone</label>
             <div class="frow__capture">
-              <input id="form1_telephone" name="telephone" class="frow__field" type="text" required="required" />
+              <input id="carbuying_telephone" name="telephone" class="frow__field" type="text" required="required" />
             </div>
             <!-- /.frow__capture -->
           </div>
@@ -121,7 +112,7 @@ eleventyComputed:
     </div>
     </fieldset>
 
-    <fieldset class="form-divider form-divider--border-bottom">
+    {# <fieldset class="form-divider form-divider--border-bottom">
     <div class="grid">
 
       <div class="grid__item one-whole">
@@ -134,9 +125,9 @@ eleventyComputed:
       <div class="grid__item one-half lte-mobile--one-whole">
 
         <div class="frow frow--text frow--dt-picker is--required">
-          <label class="frow__label" for="form1_calldate">Date</label>
+          <label class="frow__label" for="carbuying_calldate">Date</label>
           <div class="frow__capture">
-            <input id="form1_calldate" name="calldate" class="frow__field is--datepicker" placeholder="e.g: 01 Aug, 2015" type="text" required="required" />
+            <input id="carbuying_calldate" name="calldate" class="frow__field is--datepicker" placeholder="e.g: 01 Aug, 2015" type="text" required="required" />
           </div>
           <!-- /.frow__capture -->
         </div>
@@ -148,9 +139,9 @@ eleventyComputed:
       <div class="grid__item one-half lte-mobile--one-whole">
 
         <div class="frow frow--text frow--dt-picker is--required">
-          <label class="frow__label" for="form1_calltime">Time</label>
+          <label class="frow__label" for="carbuying_calltime">Time</label>
           <div class="frow__capture">
-            <input id="form1_calltime" name="calltime" class="frow__field is--timepicker" placeholder="e.g: 3:00PM" type="text" />
+            <input id="carbuying_calltime" name="calltime" class="frow__field is--timepicker" placeholder="e.g: 3:00PM" type="text" />
           </div>
           <!-- /.frow__capture -->
         </div>
@@ -160,7 +151,7 @@ eleventyComputed:
       <!-- /.grid__item one-half lte-mobile--one-whole -->
 
     </div>
-    </fieldset>
+    </fieldset> #}
 
     <fieldset class="form-divider">
 
@@ -176,9 +167,9 @@ eleventyComputed:
         <div class="grid__item one-half lte-mobile--one-whole">
 
           <div class="frow frow--text is--required">
-            <label class="frow__label" for="form1_make">Make</label>
+            <label class="frow__label" for="carbuying_make">Make</label>
             <div class="frow__capture">
-              <input id="form1_make" name="make" class="frow__field" type="text" required="required" />
+              <input id="carbuying_make" name="make" class="frow__field" type="text" required="required" />
             </div>
             <!-- /.frow__capture -->
           </div>
@@ -190,9 +181,9 @@ eleventyComputed:
         <div class="grid__item one-half lte-mobile--one-whole">
 
           <div class="frow frow--text is--required">
-            <label class="frow__label" for="form1_model">Model</label>
+            <label class="frow__label" for="carbuying_model">Model</label>
             <div class="frow__capture">
-              <input id="form1_model" name="model" class="frow__field" type="text" required="required" />
+              <input id="carbuying_model" name="model" class="frow__field" type="text" required="required" />
             </div>
             <!-- /.frow__capture -->
           </div>
@@ -204,9 +195,9 @@ eleventyComputed:
         <div class="grid__item one-whole">
 
           <div class="frow frow--textarea is--required">
-            <label class="frow__label" for="form1_message">Describe your ideal car detail</label>
+            <label class="frow__label" for="carbuying_message">Describe your ideal car detail</label>
             <div class="frow__capture">
-              <textarea id="form1_message" name="message" class="frow__field" cols="30" rows="4" required="required"></textarea>
+              <textarea id="carbuying_message" name="message" class="frow__field" cols="30" rows="4" required="required"></textarea>
             </div>
             <!-- /.frow__capture -->
           </div>
@@ -217,7 +208,7 @@ eleventyComputed:
 
         <div class="grid__item one-whole">
 
-          <input id="form1_submit" name="submit" class="btn btn--full contact-form__submit form__submit" value="Send message" type="submit" /><input type="hidden" name="cms-form" value="Y2FyX2J1eWluZzpwZXJjaF9mb3JtczovdGVtcGxhdGVzL2NvbnRlbnQvY2Fycy9jYXJidXlpbmdfZm9ybS5odG1sOjE2MzgxODMzOTk=" />
+          <input id="carbuying_submit" name="submit" class="btn btn--full contact-form__submit form__submit" value="Send message" type="submit" /><input type="hidden" name="cms-form" value="Y2FyX2J1eWluZzpwZXJjaF9mb3JtczovdGVtcGxhdGVzL2NvbnRlbnQvY2Fycy9jYXJidXlpbmdfZm9ybS5odG1sOjE2MzgxODMzOTk=" />
 
         </div>
         <!-- /.grid__item one-whole -->

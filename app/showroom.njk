@@ -1,10 +1,12 @@
 ---
-title: "Home"
+title: "Showroom"
 pagination:
   data: collections.cars
   size: 3
   alias: room
 description: ""
+eleventyNavigation:
+  parent: "home"
 eleventyComputed:
   eleventyNavigation:
     key: showroom
@@ -13,6 +15,8 @@ eleventyComputed:
 {% extends "base.njk" %}
 
 {% block main %}
+
+ {% include "callcta.njk" %}
 
 <div class="background-splash background-splash--showroom">
 	<div class="constraint">
@@ -23,11 +27,6 @@ eleventyComputed:
           <div class="grid__item one-whole gt-tablet-small--one-half">
             <h2 class="showroom__header__title">Showroom</h2>
           </div>
-          {# <div class="grid__item one-whole gt-tablet-small--one-half">
-            <div class="showroom__header__sort ta--right--gt-tablet-small">
-              <a href="?sort=low" class="sort-button">Sort price: High to low <span class="sort-button__icon">&#9650;</span></a>
-            </div>
-          </div> #}
         </div>
 			</header>
 
@@ -86,7 +85,7 @@ eleventyComputed:
           <div class="paging">
             <div class="grid grid--middle">
 
-              {# <div class="grid__item one-whole">
+              <div class="grid__item one-whole">
                 <div class="cta-carbuying group">
                   <div class="grid grid--rev">
                     <div class="grid__item one-quarter gt-tablet-small--one-sixth gt-desktop--one-tenth cta-carbuying__image">
@@ -101,7 +100,7 @@ eleventyComputed:
                     </div>
                   </div>
                 </div>
-              </div> #}
+              </div>
 
               <div class="grid__item one-half  gt-tablet--one-third paging__prev">
                   {% if pagination.href.previous%}

@@ -1,7 +1,9 @@
 ---
-title: "Apply"
+title: "Finance example"
 permalink: apply/finance-example/index.html
 description: ""
+eleventyNavigation:
+  parent: "home"
 eleventyComputed:
   eleventyNavigation:
     key: finance-example
@@ -11,15 +13,7 @@ eleventyComputed:
 
 {% block main %}
 
-<div class="cta-call">
-  <p>Questions? Get in touch</p>
-  <p>
-    <a href="tel:{{ app.contact.phone | replace(' ', '') }}" class="cta-call__link">
-      <span class="cta-call__icon"><img src="/assets/images/call_icon.png" alt="" /></span>
-      <span class="cta-call__label"><span class="webfont-a">CALL US NOW</span> <span class="icon-arrow-long-right"></span></span>
-    </a>
-  </p>
-</div>
+ {% include "callcta.njk" %}
 
 <div class='content-section content-section--normal'>
 	<div class="constraint">

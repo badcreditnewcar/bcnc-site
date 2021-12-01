@@ -2,17 +2,7 @@
 
 {% block main %}
 
-  <div class="cta-call">
-    <p>Questions? Get in touch</p>
-    <p>
-      <a href="tel:01204916044" class="cta-call__link">
-        <span class="cta-call__icon"><img src="/assets/images/call_icon.png" alt=""/></span>
-        <span class="cta-call__label">
-          <span class="webfont-a">CALL US NOW</span>
-          <span class="icon-arrow-long-right"></span></span>
-      </a>
-    </p>
-  </div>
+  {% include "callcta.njk" %}
 
   <div class="background-splash background-splash--showroom">
 
@@ -127,41 +117,27 @@
 
     </div>
 
-    {# <div id="enqForm">
+    <div id="enqForm" style="margin-top: 1rem;">
       <div class="form form--car-enquiry">
 
         <h2 class="form__title">Need more info about this car?</h2>
 
         <p>Fill in this form and we will be happy to answer all your questions</p>
 
-        <form id="form1_car_detail" class="contact-form contact-form--car" action="/showroom/lexus/nx300h/yl17ylc" method="post">
+        <form id="enqform_car_detail" name="car-enquiry" class="contact-form contact-form--car" action="/contact/thank-you/" method="post" data-netlify="true">
 
-          <input id="form1_car_make" name="car_make" value="Lexus" type="hidden"/>
-          <input id="form1_car_model" name="car_model" value="NX300h" type="hidden"/>
-          <input id="form1_car_reg" name="car_reg" value="YL17YLC" type="hidden"/>
-
-          <div class="frow frow--select frow--inline is--required">
-            <label class="frow__label" for="form1_title">Title</label>
-            <div class="frow__capture">
-              <select id="form1_title" name="title" class="frow__field" required="required">
-                <option value="Mr">Mr</option>
-                <option value="Mrs">Mrs</option>
-                <option value="Miss">Miss</option>
-                <option value="Ms">Ms</option>
-              </select>
-            </div>
-            <!-- /.frow__capture -->
-          </div>
-          <!-- /.frow frow--select -->
+          <input id="enqform_car_make" name="car_make" value="{{ make }}" type="hidden"/>
+          <input id="enqform_car_model" name="car_model" value="{{ model }}" type="hidden"/>
+          <input id="enqform_car_reg" name="car_reg" value="{{ title }}" type="hidden"/>
 
           <div class="grid">
 
             <div class="grid__item one-half lte-mobile--one-whole">
 
               <div class="frow frow--text is--required">
-                <label class="frow__label" for="form1_first_name">First name</label>
+                <label class="frow__label" for="enqform_first_name">First name</label>
                 <div class="frow__capture">
-                  <input id="form1_first_name" name="first_name" class="frow__field" type="text" required="required"/>
+                  <input id="enqform_first_name" name="first_name" class="frow__field" type="text" required="required"/>
                 </div>
                 <!-- /.frow__capture -->
               </div>
@@ -173,9 +149,9 @@
             <div class="grid__item one-half lte-mobile--one-whole">
 
               <div class="frow frow--text is--required">
-                <label class="frow__label" for="form1_surname">Surname</label>
+                <label class="frow__label" for="enqform_surname">Surname</label>
                 <div class="frow__capture">
-                  <input id="form1_surname" name="surname" class="frow__field" type="text" required="required"/>
+                  <input id="enqform_surname" name="surname" class="frow__field" type="text" required="required"/>
                 </div>
                 <!-- /.frow__capture -->
               </div>
@@ -187,9 +163,9 @@
             <div class="grid__item one-half lte-mobile--one-whole">
 
               <div class="frow frow--text is--required">
-                <label class="frow__label" for="form1_email">Email</label>
+                <label class="frow__label" for="enqform_email">Email</label>
                 <div class="frow__capture">
-                  <input id="form1_email" name="email" class="frow__field" type="email" required="required"/>
+                  <input id="enqform_email" name="email" class="frow__field" type="email" required="required"/>
                 </div>
                 <!-- /.frow__capture -->
               </div>
@@ -201,9 +177,9 @@
             <div class="grid__item one-half lte-mobile--one-whole">
 
               <div class="frow frow--text is--required">
-                <label class="frow__label" for="form1_telephone">Phone</label>
+                <label class="frow__label" for="enqform_telephone">Phone</label>
                 <div class="frow__capture">
-                  <input id="form1_telephone" name="telephone" class="frow__field" type="text" required="required"/>
+                  <input id="enqform_telephone" name="telephone" class="frow__field" type="text" required="required"/>
                 </div>
                 <!-- /.frow__capture -->
               </div>
@@ -212,7 +188,7 @@
             </div>
             <!-- /.grid__item one-half lte-mobile--one-whole -->
 
-            <div class="grid__item one-whole">
+            {# <div class="grid__item one-whole">
 
               <p>
                 <strong>Choose a date &amp; time for us to call you</strong>
@@ -224,9 +200,9 @@
             <div class="grid__item one-half lte-mobile--one-whole">
 
               <div class="frow frow--text frow--dt-picker is--required">
-                <label class="frow__label" for="form1_calldate">Date</label>
+                <label class="frow__label" for="enqform_calldate">Date</label>
                 <div class="frow__capture">
-                  <input id="form1_calldate" name="calldate" class="frow__field is--datepicker" placeholder="e.g: 01 Aug, 2015" type="text" required="required"/>
+                  <input id="enqform_calldate" name="calldate" class="frow__field is--datepicker" placeholder="e.g: 01 Aug, 2015" type="text" required="required"/>
                 </div>
                 <!-- /.frow__capture -->
               </div>
@@ -238,23 +214,23 @@
             <div class="grid__item one-half lte-mobile--one-whole">
 
               <div class="frow frow--text frow--dt-picker is--required">
-                <label class="frow__label" for="form1_calltime">Time</label>
+                <label class="frow__label" for="enqform_calltime">Time</label>
                 <div class="frow__capture">
-                  <input id="form1_calltime" name="calltime" class="frow__field is--timepicker" placeholder="e.g: 3:00PM" type="text"/>
+                  <input id="enqform_calltime" name="calltime" class="frow__field is--timepicker" placeholder="e.g: 3:00PM" type="text"/>
                 </div>
                 <!-- /.frow__capture -->
               </div>
               <!-- /.frow frow--text -->
 
             </div>
-            <!-- /.grid__item one-half lte-mobile--one-whole -->
+            <!-- /.grid__item one-half lte-mobile--one-whole --> #}
 
             <div class="grid__item one-whole">
 
               <div class="frow frow--textarea is--required">
-                <label class="frow__label" for="form1_message">A message to us</label>
+                <label class="frow__label" for="enqform_message">A message to us</label>
                 <div class="frow__capture">
-                  <textarea id="form1_message" name="message" class="frow__field" cols="30" rows="4" required="required"></textarea>
+                  <textarea id="enqform_message" name="message" class="frow__field" cols="30" rows="4" required="required"></textarea>
                 </div>
                 <!-- /.frow__capture -->
               </div>
@@ -265,7 +241,7 @@
 
             <div class="grid__item one-whole">
 
-              <input id="form1_submit" name="submit" class="btn btn--full contact-form__submit form__submit" value="Send message" type="submit"/><input type="hidden" name="cms-form" value="Y2FyX2RldGFpbDpwZXJjaF9mb3JtczovdGVtcGxhdGVzL2NvbnRlbnQvY2Fycy9zaG93cm9vbV9pdGVtX2RldGFpbF9mb3JtLmh0bWw6MTYzODAyNDc2MA=="/>
+              <input id="enqform_submit" name="submit" class="btn btn--full contact-form__submit form__submit" value="Send message" type="submit"/>
 
             </div>
             <!-- /.grid__item one-whole -->
@@ -275,9 +251,10 @@
 
         </form>
 
-      </div> #}
-
+      </div>
 
     </div>
+
+  </div>
 
   {% endblock %}

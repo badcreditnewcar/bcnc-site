@@ -2,6 +2,8 @@
 title: "Contact us"
 permalink: contact/index.html
 description: ""
+eleventyNavigation:
+  parent: "home"
 eleventyComputed:
   eleventyNavigation:
     key: contact
@@ -96,25 +98,16 @@ eleventyComputed:
 
     <h2 class="content-section__title">Contact Form</h2>
 
-    <form name="contact" id="form1_contact_form" class="contact-form" action="/contact/thank-you/" method="post" data-netlify="true">
-
-      <div class="frow frow--select frow--inline is--required">
-        <label class="frow__label" for="form1_title">Title</label>
-        <div class="frow__capture">
-          <select id="form1_title" name="title" class="frow__field" required="required"><option value="Mr">Mr</option><option value="Mrs">Mrs</option><option value="Miss">Miss</option><option value="Ms">Ms</option></select>
-        </div>
-        <!-- /.frow__capture -->
-      </div>
-      <!-- /.frow frow--select -->
+    <form name="contact" id="contact_contact_form" class="contact-form" action="/contact/thank-you/" method="post" data-netlify="true">
 
       <div class="grid">
 
         <div class="grid__item one-half lte-mobile--one-whole">
 
           <div class="frow frow--text is--required">
-            <label class="frow__label" for="form1_first_name">First name</label>
+            <label class="frow__label" for="contact_first_name">First name</label>
             <div class="frow__capture">
-              <input id="form1_first_name" name="first_name" class="frow__field" type="text" required="required" />
+              <input id="contact_first_name" name="first_name" class="frow__field" type="text" required="required" />
             </div>
             <!-- /.frow__capture -->
           </div>
@@ -126,9 +119,9 @@ eleventyComputed:
         <div class="grid__item one-half lte-mobile--one-whole">
 
           <div class="frow frow--text is--required">
-            <label class="frow__label" for="form1_surname">Surname</label>
+            <label class="frow__label" for="contact_surname">Surname</label>
             <div class="frow__capture">
-              <input id="form1_surname" name="surname" class="frow__field" type="text" required="required" />
+              <input id="contact_surname" name="surname" class="frow__field" type="text" required="required" />
             </div>
             <!-- /.frow__capture -->
           </div>
@@ -140,9 +133,9 @@ eleventyComputed:
         <div class="grid__item one-half lte-mobile--one-whole">
 
           <div class="frow frow--text is--required">
-            <label class="frow__label" for="form1_email">Email</label>
+            <label class="frow__label" for="contact_email">Email</label>
             <div class="frow__capture">
-              <input id="form1_email" name="email" class="frow__field" type="email" required="required" />
+              <input id="contact_email" name="email" class="frow__field" type="email" required="required" />
             </div>
             <!-- /.frow__capture -->
           </div>
@@ -154,9 +147,9 @@ eleventyComputed:
         <div class="grid__item one-half lte-mobile--one-whole">
 
           <div class="frow frow--text is--required">
-            <label class="frow__label" for="form1_telephone">Phone</label>
+            <label class="frow__label" for="contact_telephone">Phone</label>
             <div class="frow__capture">
-              <input id="form1_telephone" name="telephone" class="frow__field" type="text" required="required" />
+              <input id="contact_telephone" name="telephone" class="frow__field" type="text" required="required" />
             </div>
             <!-- /.frow__capture -->
           </div>
@@ -168,9 +161,9 @@ eleventyComputed:
         <div class="grid__item one-whole">
 
           <div class="frow frow--textarea is--required">
-            <label class="frow__label" for="form1_message">A message to us</label>
+            <label class="frow__label" for="contact_message">A message to us</label>
             <div class="frow__capture">
-              <textarea id="form1_message" name="message" class="frow__field" cols="30" rows="4" required="required"></textarea>
+              <textarea id="contact_message" name="message" class="frow__field" cols="30" rows="4" required="required"></textarea>
             </div>
             <!-- /.frow__capture -->
           </div>
@@ -180,8 +173,7 @@ eleventyComputed:
         <!-- /.grid__item one-whole -->
 
         <div class="grid__item one-whole">
-          <input id="form1_forthebees" name="forthebees" class="beetrap" type="text" />
-          <input id="form1_submit" name="submit" class="btn btn--full contact-form__submit form__submit" value="Send message" type="submit" /><input type="hidden" name="cms-form" value="Y29udGFjdF9mb3JtOnBlcmNoX2Zvcm1zOi90ZW1wbGF0ZXMvY29udGVudC9jb250YWN0X2Zvcm0uaHRtbDoxNjM4MTc5NjQ3" />
+          <input id="contact_submit" name="submit" class="btn btn--full contact-form__submit form__submit" value="Send message" type="submit" /><input type="hidden" name="cms-form" value="Y29udGFjdF9mb3JtOnBlcmNoX2Zvcm1zOi90ZW1wbGF0ZXMvY29udGVudC9jb250YWN0X2Zvcm0uaHRtbDoxNjM4MTc5NjQ3" />
         </div>
         <!-- /.grid__item one-whole -->
 
@@ -197,9 +189,7 @@ eleventyComputed:
 <!-- /.content-section content-section--repair -->
 
 
-<script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLFeM0GV2rPPVSuiR_vLIw9c_rgnCQjB0">
-    </script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLFeM0GV2rPPVSuiR_vLIw9c_rgnCQjB0"></script>
 
 	<script type="text/javascript">
 

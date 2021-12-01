@@ -11,6 +11,15 @@
     <meta property="og:title" content="{{ title }}">
     {% if description %}<meta property="og:description" name="description" content="{{ description | markdown("inline") | striptags(true) }}">{% endif %}
     <meta property="og:image" content="{{ og_image | d('/images/opengraph-image.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+    <link rel="manifest" href="/assets/images/site.webmanifest">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/assets/images/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/assets/images/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
   {% endblock %}
 </head>
 <body>
@@ -30,7 +39,7 @@
 				<div class="header-global__navigation__menu js-menu-object">
 					<nav class="navigation-global" role="navigation">
 						<ul>
-              <li><a href="/" data-scroll-to="#welcome">Home</a></li>
+              <li><a href="/" {% if eleventyNavigation.key == "home" %}data-scroll-to="#welcome"{% endif %}>Home</a></li>
 							<li><a href="/about/" title="About us">About</a></li>
 							<li><a href="/apply/" title="Apply for help and services in getting you a newer, better car">Apply</a></li>
 							<li><a href="/showroom/" title="View our online showroom of all types of cars">Showroom</a></li>
@@ -100,15 +109,7 @@
 
   </script>
 
-  <!-- Global site tag (gtag.js) - Google Ads: 704931418 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-704931418"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-704931418');
-  </script>
-
+  <!-- Facebook Pixel Code -->
   <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -120,38 +121,13 @@
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '408818136134004');
     fbq('track', 'PageView');
-    fbq('init', '431608194425042');
-    fbq('track', 'PageView');
+    {# fbq('init', '431608194425042');
+    fbq('track', 'PageView'); #}
   </script>
   <noscript>
     <img height="1" width="1" src="https://www.facebook.com/tr?id=408818136134004&ev=PageView&noscript=1"/>
-    <img height="1" width="1" src="https://www.facebook.com/tr?id=431608194425042&ev=PageView&noscript=1"/>
+    {# <img height="1" width="1" src="https://www.facebook.com/tr?id=431608194425042&ev=PageView&noscript=1"/> #}
   </noscript>
-
-  <!-- Taboola Pixel Code -->
-  <script type='text/javascript'>
-    window._tfa = window._tfa || [];
-    window._tfa.push({notify: 'event', name: 'page_view', id: 1244422});
-    !function (t, f, a, x) {
-          if (!document.getElementById(x)) {
-              t.async = 1;t.src = a;t.id=x;f.parentNode.insertBefore(t, f);
-          }
-    }(document.createElement('script'),
-    document.getElementsByTagName('script')[0],
-    '//cdn.taboola.com/libtrc/unip/1244422/tfa.js',
-    'tb_tfa_script');
-  </script>
-  <noscript>
-    <img src='//trc.taboola.com/1244422/log/3/unip?en=page_view' width='0' height='0' style='display:none'/>
-  </noscript>
-
-  <script data-obct type="text/javascript">
-    /** DO NOT MODIFY THIS CODE**/
-    !function(_window, _document) {
-      var OB_ADV_ID='00c57bf503246fda85fadeac6bb2bec845';
-      if (_window.obApi) {var toArray = function(object) {return Object.prototype.toString.call(object) === '[object Array]' ? object : [object];};_window.obApi.marketerId = toArray(_window.obApi.marketerId).concat(toArray(OB_ADV_ID));return;}
-      var api = _window.obApi = function() {api.dispatch ? api.dispatch.apply(api, arguments) : api.queue.push(arguments);};api.version = '1.1';api.loaded = true;api.marketerId = OB_ADV_ID;api.queue = [];var tag = _document.createElement('script');tag.async = true;tag.src = '//amplify.outbrain.com/cp/obtp.js';tag.type = 'text/javascript';var script = _document.getElementsByTagName('script')[0];script.parentNode.insertBefore(tag, script);}(window, document); obApi('track', 'PAGE_VIEW');
-  </script>
 
 {% endblock %}
 
