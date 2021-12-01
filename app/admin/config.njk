@@ -127,13 +127,14 @@ collections:
         widget: "image"
         choose_url: false
         media_folder: "/app/_assets/images/uploads/cars"
+        public_folder: "/assets/images/uploads/cars"
       - label: "Images"
         name: "images"
         widget: "list"
         minimize_collapsed: true
         collapsed: false
         summary: '{{fields.image}}'
-        field: { label: Image, name: image, widget: image, choose_url: false, media_folder: "/app/_assets/images/uploads/cars" }
+        field: { label: Image, name: image, widget: image, choose_url: false, media_folder: "/app/_assets/images/uploads/cars", public_folder: "/assets/images/uploads/cars" }
       - label: "Features"
         name: "features"
         widget: "list"
