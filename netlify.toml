@@ -1,3 +1,9 @@
 [build]
   command = "npm run build"
   publish = "public"
+
+[[redirects]]
+  from = "/showroom/nissan/qashqai-1-5-dci-2/ea61tvj"
+  to = "/showroom"
+  status = 301
+  force = false
