@@ -7,3 +7,21 @@
   to = "/showroom"
   status = 301
   force = false
+
+[[redirects]]
+  from = "/favicon.ico"
+  to = "/assets/images/favicon.ico"
+  status = 301
+  force = false
+
+[[redirects]]
+  from = "/.well-known"
+  to = "/"
+  status = 301
+  force = false
+
+[[redirects]]
+  from = "/index.php"
+  to = "/"
+  status = 301
+  force = false
