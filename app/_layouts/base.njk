@@ -10,7 +10,7 @@
     <link href="/assets/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" />
     <meta property="og:title" content="{{ title }}">
     {% if description %}<meta property="og:description" name="description" content="{{ description | markdown("inline") | striptags(true) }}">{% endif %}
-    <meta property="og:image" content="{{ og_image | d('/images/opengraph-image.png') }}">
+    <meta property="og:image" content="{{ og_image | d('/assets/images/opengraph-image.png') }}">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
