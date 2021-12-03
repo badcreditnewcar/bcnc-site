@@ -6,7 +6,7 @@ submodel: TDI
 transmission: Automatic
 milage: 82303
 fuel_type: Diesel
-main_image: /assets/images/uploads/cars/dsc01476-w900h675.jpg
+main_image: /assets/images/uploads/cars/dsc01461-w900h675.jpg
 images:
   - /assets/images/uploads/cars/dsc01462-w900h675.jpg
   - /assets/images/uploads/cars/dsc01463-w900h675.jpg
