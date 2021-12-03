@@ -134,6 +134,7 @@ collections:
         minimize_collapsed: true
         collapsed: false
         summary: '{{fields.image}}'
+        add_to_top: true
         field: { label: Image, name: image, widget: image, choose_url: false, media_folder: "/app/_assets/images/uploads/cars", public_folder: "/assets/images/uploads/cars" }
       - label: "Features"
         name: "features"
@@ -184,5 +185,4 @@ collections:
         fields:
           - { label: "Amount", name: "amount", widget: "number" }
           - { label: "Interval", name: "interval", widget: "select", options: ["weekly", "monthly"], default: "weekly" }
-
       - { label: "Hidden", name: "hidden", widget: "boolean", default: false, hint: "Hides this content from the site. Defaults to false." }

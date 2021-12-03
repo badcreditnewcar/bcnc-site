@@ -46,8 +46,9 @@ module.exports = function (eleventyConfig) {
         .filter(function (item) {
           // will only return items that are not specifically hidden
           return item.data.hidden === false;
-        }),
-    ].reverse();
+        })
+        .sort((a, b) => (a.data.price.amount > b.data.price.amount ? 1 : -1)),
+    ];
   });
 
   // Passthrough
