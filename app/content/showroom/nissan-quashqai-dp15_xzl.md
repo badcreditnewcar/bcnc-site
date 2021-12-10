@@ -1,7 +1,7 @@
 ---
 title: DP15 XZL
 make: Nissan
-model: Quashqai
+model: Qashqai
 submodel: 1.5 DCI
 transmission: Manual
 milage: 42300
