@@ -13,6 +13,6 @@ images:
   - /assets/images/uploads/cars/dsc01479-w900h675.jpg
 price:
   interval: weekly
-  amount: 59
+  amount: 49
 hidden: false
 ---

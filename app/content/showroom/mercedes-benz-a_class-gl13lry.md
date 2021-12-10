@@ -19,6 +19,6 @@ features:
   - feature: 12 Months Warrenty
 price:
   interval: weekly
-  amount: 70
+  amount: 68
 hidden: false
 ---
