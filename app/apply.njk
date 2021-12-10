@@ -12,7 +12,7 @@ eleventyComputed:
 {% extends "base.njk" %}
 
 {% block main %}
-  {% include 'callcta.njk' %}
+
   <div class="content-section content-section--repair content-section--alt2" id="applypane">
     <div class="constraint">
       <h2 class="content-section__title">Apply to Bad Credit New Car</h2>
@@ -26,10 +26,12 @@ eleventyComputed:
   <script type="text/javascript">
     var AcTarget = "badcreditnewcar";
     var AcInjectParentScript = document.createElement('script');
-    document.body.appendChild(AcInjectParentScript);
+    document
+      .body
+      .appendChild(AcInjectParentScript);
     var acRng = Math.floor(Math.random() * 10000000) + 1;
     AcInjectParentScript.onload = function () {};
-    AcInjectParentScript.src = "https://iframe.app.autoconvert.co.uk/js/iframe/"+AcTarget+"/parent-comms.js?ver=" + acRng;
-	</script>
+    AcInjectParentScript.src = "https://iframe.app.autoconvert.co.uk/js/iframe/" + AcTarget + "/parent-comms.js?ver=" + acRng;
+  </script>
   <script src="https://iframe.app.autoconvert.co.uk/assets/js/iframe/ac/ac-cookies.min.js" type="text/javascript"></script>
 {% endblock %}
