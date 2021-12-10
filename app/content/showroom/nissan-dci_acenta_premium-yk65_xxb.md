@@ -1,8 +1,8 @@
 ---
 title: YK65 XXB
 make: Nissan
-model: DCI ACENTA PREMIUM
-submodel: Qashqai
+model: Qashqai
+submodel: DCI ACENTA PREMIUM
 transmission: Manual
 milage: 63448
 fuel_type: Diesel
