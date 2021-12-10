@@ -1,7 +1,7 @@
 ---
 title: MF16CGG
 make: Volkswagen
-model: Golf
+model: Golf GTD
 submodel: GTD DSG
 transmission: Automatic
 milage: 57887
