@@ -1,7 +1,7 @@
 ---
 title: WP66 BMZ
 make: Nissan
-model: Quashqui
+model: Qashqai
 submodel: DCI Acenta
 transmission: Manual
 milage: 69200
