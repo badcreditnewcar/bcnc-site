@@ -29,41 +29,43 @@
           <div class="grid__item one-whole gt-desktop--two-thirds">
 
             {% if main_image %}
-            <div class="showroom-car__images">
-              <div class="carousel carousel--car-item" data-slick='{"slidesToShow": 1, "slidesToScroll": 1, "dots": true}'>
+              <div class="showroom-car__images">
+                <div class="carousel carousel--car-item" data-slick='{"slidesToShow": 1, "slidesToScroll": 1, "dots": true}'>
 
-                <div class="carousel__item">
-                  <div class="carousel__item__thumb">
-                    <img src='{{ main_image }}' alt="">
-                  </div>
-                </div>
-
-                {% if images %}
-                {% for image in images %}
                   <div class="carousel__item">
                     <div class="carousel__item__thumb">
-                      <img src='{{ image }}' alt="">
+                      <img src='{{ main_image }}' alt="">
                     </div>
                   </div>
-                {% endfor %}
-                {% endif %}
 
+                  {% if images %}
+                    {% for image in images %}
+                      <div class="carousel__item">
+                        <div class="carousel__item__thumb">
+                          <img src='{{ image }}' alt="">
+                        </div>
+                      </div>
+                    {% endfor %}
+                  {% endif %}
+
+                </div>
               </div>
-            </div>
             {% endif %}
 
             {% if price %}
-            <div class="showroom-car__header">
-              <div class="showroom-car__header__price">
-                <div class="showroom-car__header__price__title">
+              <div class="showroom-car__header">
+                <div class="showroom-car__header__price">
+                  <div class="showroom-car__header__price__title">
 						      This car can be yours for just
 					      </div>
-                <span class="showroom-car__header__price__inner">
-                  <span class="showroom-car__header__price__inner__currency">&pound;</span>
-                  <span class="showroom-car__header__price__inner__amount">{{ price.amount | d('99') }} {% if price.interval == "weekly" %}per week {% else %}per month{% endif %}</span>
-                </span>
+                  <span class="showroom-car__header__price__inner">
+                    <span class="showroom-car__header__price__inner__currency">&pound;</span>
+                    <span class="showroom-car__header__price__inner__amount">{{ price.amount | d('99') }}
+                      {% if price.interval == "weekly" %}per week {% else %}per month{% endif %}
+                    </span>
+                  </span>
+                </div>
               </div>
-            </div>
             {% endif %}
 
           </div>
@@ -94,7 +96,9 @@
               <h2 class="showroom-car__subtitle">Features</h2>
               <ul class="car-features">
                 {% for item in features %}
-                  <li>{{ item.feature }}{% if not loop.last %}, {% endif %}</li>
+                  <li>{{ item.feature }}
+                    {% if not loop.last %}, {% endif %}
+                  </li>
                 {% endfor %}
               </ul>
             </div>
@@ -220,4 +224,4 @@
 
   </div>
 
-  {% endblock %}
+{% endblock %}
