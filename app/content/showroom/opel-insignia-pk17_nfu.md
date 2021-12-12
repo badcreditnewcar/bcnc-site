@@ -1,7 +1,7 @@
 ---
 title: PK17 NFU
 make: Opel
-model: Insignia
+model: " Vauxhall Insignia"
 submodel: SRI
 transmission: Manual
 milage: 68632
@@ -13,11 +13,14 @@ images:
   - /assets/images/uploads/cars/dsc01558.jpg
   - /assets/images/uploads/cars/dsc01557.jpg
 features:
-  - feature: Electric Mirrors
-  - feature: Parking Sensors
-  - feature: Alloy Wheels
-  - feature: 12 Months MOT
   - feature: 12 Months Warrenty
+  - feature: 12 Months MOT
+  - feature: Alloy Wheels
+  - feature: SAT Nav
+  - feature: Multi Media
+  - feature: Cruise Control
+  - feature: ABS
+  - feature: EPS
 price:
   interval: weekly
   amount: 58
