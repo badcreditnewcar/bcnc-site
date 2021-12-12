@@ -1,10 +1,10 @@
 ---
 title: YR18UAS
 make: Ford
-model: Focus
-submodel: ST Line
+model: Focus ST Line
+submodel: "1.0 Eco boost "
 transmission: Manual
-milage: 10000
+milage: 26775
 fuel_type: Petrol
 main_image: /assets/images/uploads/cars/dsc01801-w900h675.jpg
 images:
