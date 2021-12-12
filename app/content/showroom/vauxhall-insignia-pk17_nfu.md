@@ -1,7 +1,7 @@
 ---
 title: PK17 NFU
-make: Opel
-model: " Vauxhall Insignia"
+make: Vauxhall
+model: "Insignia"
 submodel: SRI
 transmission: Manual
 milage: 68632

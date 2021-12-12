@@ -1,7 +1,7 @@
 ---
 title: KM65 HYS
-make: Opel
-model: Vauxhall Mokka
+make: Vauxhall
+model: Mokka
 submodel: Cdti
 transmission: Manual
 milage: 56834
