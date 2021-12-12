@@ -1,10 +1,10 @@
 ---
 title: BT14 HKG
 make: Audi
-model: Q3
+model: Q3 1.4 TFSI
 submodel: S Line TFSI
 transmission: Manual
-milage: 46700
+milage: 64556
 fuel_type: Petrol
 main_image: /assets/images/uploads/cars/dsc01015-w900h675.jpg
 images:
