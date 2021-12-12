@@ -7,6 +7,11 @@ transmission: Manual
 milage: 32513
 fuel_type: Petrol
 main_image: /assets/images/uploads/cars/dsc01818-w900h675.jpg
+images:
+  - /assets/images/uploads/cars/dsc01822-w900h675.jpg
+  - /assets/images/uploads/cars/dsc01821-w900h675.jpg
+  - /assets/images/uploads/cars/dsc01820-w900h675.jpg
+  - /assets/images/uploads/cars/dsc01819-w900h675.jpg
 features:
   - feature: Parking Sensors
   - feature: Alloy Wheels
