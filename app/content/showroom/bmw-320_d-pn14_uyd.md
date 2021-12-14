@@ -1,7 +1,7 @@
 ---
 title: PN14 UYD
 make: BMW
-model: "320 d "
+model: 320D SPORT
 submodel: "Efficient Dynamics "
 transmission: Manual
 milage: 59852
