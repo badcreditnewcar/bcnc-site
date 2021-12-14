@@ -1,8 +1,8 @@
 ---
 title: WD67 OMS
 make: Audi
-model: A1
-submodel: Sportback TFSI
+model: A1 SPORT
+submodel: TFSI
 transmission: Manual
 milage: 32513
 fuel_type: Petrol
