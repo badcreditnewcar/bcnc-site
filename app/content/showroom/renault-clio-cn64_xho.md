@@ -12,6 +12,16 @@ images:
   - /assets/images/uploads/cars/dsc01544.jpg
   - /assets/images/uploads/cars/dsc01543.jpg
   - /assets/images/uploads/cars/dsc01542.jpg
+features:
+  - feature: Keyless Start
+  - feature: Keyless GO
+  - feature: SAT Nav
+  - feature: Cruise Control
+  - feature: CD Player
+  - feature: Parking Sensors
+  - feature: Metallic Paint
+  - feature: 12 Months MOT
+  - feature: 12 Months Warrenty
 price:
   interval: weekly
   amount: 45
