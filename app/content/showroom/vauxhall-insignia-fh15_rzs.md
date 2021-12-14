@@ -1,8 +1,8 @@
 ---
 title: FH15 RZS
 make: Vauxhall
-model: Insignia
-submodel: SRI Nav VX Line
+model: Insignia VX Line
+submodel: "SRI Nav "
 transmission: Automatic
 milage: 59622
 fuel_type: Diesel
