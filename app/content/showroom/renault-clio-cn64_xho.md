@@ -13,7 +13,7 @@ images:
   - /assets/images/uploads/cars/dsc01543.jpg
   - /assets/images/uploads/cars/dsc01542.jpg
 price:
-  interval: monthly
-  amount: 60
+  interval: weekly
+  amount: 45
 hidden: false
 ---
