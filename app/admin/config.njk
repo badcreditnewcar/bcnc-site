@@ -18,6 +18,17 @@ slug:
   clean_accents: true
   sanitize_replacement: "_"
 site_url: {{ "http://localhost:8080" if env == "local" else "https://badcreditnewcar.co.uk" }}
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: bcnc
+    api_key: 833781372117439
+    sources: local'
+    default_transformations:
+      - - fetch_format: auto
+          width: 960
+          quality: auto
+          crop: scale
 collections:
   - name: "cars"
     label: "Car pages"
