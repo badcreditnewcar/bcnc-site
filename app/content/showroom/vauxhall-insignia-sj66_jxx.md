@@ -4,7 +4,7 @@ make: Vauxhall
 model: Insignia
 submodel: CDTi
 transmission: Manual
-milage: 60250
+milage: 60110
 fuel_type: Diesel
 main_image: https://res.cloudinary.com/bcnc/image/upload/c_scale,f_auto,q_auto,w_960/v1647799067/DSC01924_ave5e1.jpg
 images:
